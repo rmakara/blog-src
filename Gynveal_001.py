@@ -19,24 +19,24 @@ data = [
 
 keys = [
   data[4][0] ^ ord('a'),
-	data[0][1] ^ ord('n'),
-	data[0][2] ^ ord('d'),
-	data[10][3] ^ ord('e'),
-	data[2][4] ^ ord('r'),
-	data[2][5] ^ ord('e'),
-	data[6][6] ^ ord('t'),
+  data[0][1] ^ ord('n'),
+  data[0][2] ^ ord('d'),
+  data[10][3] ^ ord('e'),
+  data[2][4] ^ ord('r'),
+  data[2][5] ^ ord('e'),
+  data[6][6] ^ ord('t'),
 ]
 
 for i in data:
-	for k in i:
-		sys.stdout.write(hex(k) + ' ')
-	print ""
-	for j in range(0, len(keys)):	
-		if len(i) > j:
-			sys.stdout.write(Xor(i[j], j))
+  for k in i:
+    sys.stdout.write(hex(k) + ' ')
+  print ""
+  for j in range(0, len(keys)):  
+    if len(i) > j:
+      sys.stdout.write(Xor(i[j], j))
 
-	print ""
+  print ""
 
 print 'Key: '
 for i in keys:
-	sys.stdout.write(hex(i) + ' ')
+  sys.stdout.write(hex(i) + ' ')
